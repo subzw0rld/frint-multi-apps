@@ -6,7 +6,7 @@ import rootReducer from '../reducers';
 import { DEFAULT_COLOR } from '../constants';
 
 export default createApp({
-    name: 'BarApp',
+    name: 'OrderSummary',
     providers: [
         {
             name: 'component',

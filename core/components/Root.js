@@ -7,13 +7,13 @@ export default class Root extends Component {
             <div className="container">
                 <div className="row">
                     <div className="eight columns">
-                        <h3>Main</h3>
+                        <h4>Product Details</h4>
                         <hr />
                         <Region name="main" />
                     </div>
 
                     <div className="four columns">
-                        <h3>Sidebar</h3>
+                        <h4>Order Summary</h4>
                         <hr />
                         <Region name="sidebar" />
                     </div>

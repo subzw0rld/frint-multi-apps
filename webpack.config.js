@@ -6,8 +6,8 @@ const path = require('path');
 module.exports = {
     entry: {
         core: path.resolve(__dirname, 'core/index.js'),
-        'app-bar': path.resolve(__dirname, 'app-bar/index.js'),
-        'app-foo': path.resolve(__dirname, 'app-foo/index.js')
+        'order-summary': path.resolve(__dirname, 'order-summary/index.js'),
+        'product-details': path.resolve(__dirname, 'product-details/index.js')
     },
     devtool: 'source-map',
     output: {

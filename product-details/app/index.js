@@ -3,9 +3,10 @@ import {createStore} from 'frint-store';
 
 import RootComponent from '../components/Root';
 import rootReducer from '../reducers';
+import { DEFAULT_TEXT } from '../constants';
 
 export default createApp({
-    name: 'FooApp',
+    name: 'ProductDetails',
     providers: [
         {
             name: 'component',
@@ -17,7 +18,10 @@ export default createApp({
                 const Store = createStore({
                     initialState: {
                         counter: {
-                            value: 0
+                            value: 1
+                        },
+                        text: {
+                            value : DEFAULT_TEXT
                         }
                     },
 

@@ -5,9 +5,609 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiple Apps Example</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/product.css">
 </head>
 <body>
-    <div id="root"></div>
     <script src="./js/vendor.js"></script>
-<script type="text/javascript" src="js/core.js" async></script><script type="text/javascript" src="js/app-bar.js" async></script><script type="text/javascript" src="js/app-foo.js" async></script></body>
+    <noscript>
+        You need to enable JavaScript to run this app.
+     </noscript>
+     <div>  
+        <div class="wrapper enable-header-transparent">
+           <div class="ai-preloader ">
+              <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
+                 <div class="ai-child ai-bounce1"></div>
+                 <div class="ai-child ai-bounce2"></div>
+                 <div class="ai-child ai-bounce3"></div>
+              </div>
+           </div>
+           <div id="top">
+              <div class="off-canvas-stage">
+                 <header class="navigation navigation-gradient-black navigation-gradient js-enhanced navigation-has-toggle">
+                    <div class="navigation-controls">
+                       <div class="navigation-close"></div>
+                    </div>
+                    <div class="navigation-toggle">
+                       <div class="navigation-burger"></div>
+                    </div>
+                    <div class="navigation-content">
+                       <div class="navigation-logo">
+                          <a href="/home" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_header-logo">
+                             <div class="navigation-logo-brand"></div>
+                          </a>
+                       </div>
+                       <nav class="navigation-meta navigation-meta--extended">
+                          <ul class="navigation-meta-portal">
+                             <li class="navigation-meta-item"><a href="#" class="navigation-meta-item-current" title="PRIVATKUNDEN" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_PRIVATKUNDEN">PRIVATKUNDEN</a></li>
+                             <li class="navigation-meta-item"><a href="#" class="hidden" title="GESCHÄFTSKUNDEN" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_GESCHÄFTSKUNDEN">GESCHÄFTSKUNDEN</a></li>
+                          </ul>
+                          <div class="navigation-meta-link-container js-enhanced">
+                             <ul class="navigation-meta-links navigation-meta-links--initial-view">
+                                <li class="navigation-meta-item"><a href="#" title="Priority Treuevorteile" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Priority Treuevorteile"><span class="glyphicon glyphicon-priority"></span>Priority Treuevorteile</a></li>
+                                <li class="navigation-meta-item"><a href="#" class="modal-link" title="Bestellhotline" rel="nofollow" data-cms-page="60352" data-js="modals" data-cms-target="60580" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Bestellhotline 089 78 79 79 444"><span class="glyphicon glyphicon-phone"></span>Bestellhotline 089 78 79 79 444</a></li>
+                                <li class="navigation-meta-item"><a href="#" title="Shops" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Shops"><span class="glyphicon glyphicon-retail"></span>Shops</a></li>
+                                <div class="navigation-meta-item navigation-meta-item-toggle js-enhanced navigation-meta-item-toggle--clone"><a href="#"><span class="glyphicon glyphicon-arrow-left"></span> <span class="text-more">Mehr</span><span class="text-less">Weniger</span></a></div>
+                             </ul>
+                             <ul class="navigation-meta-links navigation-meta-links--slide-view">
+                                <li class="navigation-meta-item"><a href="#" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Ratgeber"><span class="glyphicon glyphicon-magazin"></span>Ratgeber</a></li>
+                                <li class="navigation-meta-item"><a href="#" title="AOL-Portal" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_AOL-Portal"><span class="glyphicon glyphicon-aol"></span>AOL-Portal</a></li>
+                                <li class="navigation-meta-item"><a href="#" title="Webmail" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Webmail"><span class="glyphicon glyphicon-internet"></span>Webmail</a></li>
+                             </ul>
+                          </div>
+                          <div class="navigation-meta-item navigation-meta-item-toggle js-enhanced"><a href="#"><span class="glyphicon glyphicon-arrow-left"></span> <span class="text-more">Mehr</span><span class="text-less">Weniger</span></a></div>
+                       </nav>
+                       <nav class="navigation-main">
+                          <ul>
+                             <li class="navigation-item navigation-item-main">
+                                <a href="#" class="navigation-label" data-tracking-action="mainnavi" data-tracking-description="cms__cms/home/view_Handys"><span class="glyphicon glyphicon-smartphone"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Handsets</font></font></a>
+                                <div class="navigation-sub navigation-sub-main">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-sub-headline"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Handsets</font></font></div>
+                                      <ul class="navigation-main-separated">
+                                         <li class="navigation-main-separated-item ">
+                                            <ul> </ul>
+                                         </li>
+                                      </ul>
+                                   </div>
+                                </div>
+                             </li>
+                             <li class="navigation-item navigation-item-main">
+                                <a href="#" class="navigation-label" data-tracking-action="mainnavi" data-tracking-description="cms__cms/home/view_Handys"><span class="glyphicon glyphicon-smartphone"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O<sub>2</sub>Pre-Paid</font></font></a>
+                                <div class="navigation-sub navigation-sub-main">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-sub-headline"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O<sub>2</sub>Pre-Paid</font></font></div>
+                                      <ul class="navigation-main-separated">
+                                         <li class="navigation-main-separated-item ">
+                                            <ul> </ul>
+                                         </li>
+                                      </ul>
+                                   </div>
+                                </div>
+                             </li>
+                             <li class="navigation-item navigation-item-main">
+                                <a href="#" class="navigation-label" data-tracking-action="mainnavi" data-tracking-description="cms__cms/home/view_Handys"><span class="glyphicon glyphicon-smartphone"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O<sub>2</sub>Post-Paid</font></font></a>
+                                <div class="navigation-sub navigation-sub-main">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-sub-headline"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O<sub>2</sub>Post-Paid</font></font></div>
+                                      <ul class="navigation-main-separated">
+                                         <li class="navigation-main-separated-item ">
+                                            <ul> </ul>
+                                         </li>
+                                      </ul>
+                                   </div>
+                                </div>
+                             </li>
+                             <li class="navigation-item navigation-item-main">
+                                <a href="#" class="navigation-label" data-tracking-action="mainnavi" data-tracking-description="cms__cms/home/view_Handys"><span class="glyphicon glyphicon-smartphone"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Broadband</font></font></a>
+                                <div class="navigation-sub navigation-sub-main">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-sub-headline"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Broadband</font></font></div>
+                                      <ul class="navigation-main-separated">
+                                         <li class="navigation-main-separated-item ">
+                                            <ul> </ul>
+                                         </li>
+                                      </ul>
+                                   </div>
+                                </div>
+                             </li>
+                             <li class="navigation-item navigation-item-main">
+                                <a href="#" class="navigation-label" data-tracking-action="mainnavi" data-tracking-description="cms__cms/home/view_Handys"><span class="glyphicon glyphicon-smartphone"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fixed Line</font></font></a>
+                                <div class="navigation-sub navigation-sub-main">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-sub-headline"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fixed Line</font></font></div>
+                                      <ul class="navigation-main-separated">
+                                         <li class="navigation-main-separated-item ">
+                                            <ul> </ul>
+                                         </li>
+                                      </ul>
+                                   </div>
+                                </div>
+                             </li>
+                             <li class="navigation-item navigation-item-main">
+                                <a href="#" class="navigation-label" data-tracking-action="mainnavi" data-tracking-description="cms__cms/home/view_Handys"><span class="glyphicon glyphicon-smartphone"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quad Play</font></font></a>
+                                <div class="navigation-sub navigation-sub-main">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-sub-headline"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quad Play</font></font></div>
+                                      <ul class="navigation-main-separated">
+                                         <li class="navigation-main-separated-item ">
+                                            <ul> </ul>
+                                         </li>
+                                      </ul>
+                                   </div>
+                                </div>
+                             </li>
+                             <!-- markup for profile goes here -->
+                             <li class="navigation-item navigation-item-main navigation-item-login">
+                                <a class="navigation-label">
+                                <span class="glyphicon glyphicon-user"></span>Mein o2
+                                </a>
+                                <div class="navigation-sub navigation-sub-main">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-sub-headline">
+                                         Mein o2
+                                      </div>
+                                      <ul class="navigation-login">
+                                         <li class="navigation-login-block navigation-link-list"></li>
+                                         <li class="navigation-login-block navigation-link-list"></li>
+                                         <li class="navigation-login-block navigation-link-list"></li>
+                                         <li class="navigation-login-block">
+                                            <div class="navigation-login-block-label"><span class="glyphicon glyphicon-user"></span>My O<sub>2</sub></div>
+                                            <ul>
+                                               <li><a class="btn btn-beta">Logout</a></li>
+                                               <li><a href="#" class="link" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Login">Personal Page</a></li>
+                                               <li><a href="#" class="link" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Login">My Account</a></li>
+                                            </ul>
+                                         </li>
+                                      </ul>
+                                   </div>
+                                </div>
+                             </li>
+                             <li class="navigation-item navigation-item-main navigation-item-search js-enhanced">
+                                <a class="navigation-label">
+                                <span class="glyphicon glyphicon-search"></span>Suche
+                                </a>
+                                <div class="navigation-sub navigation-sub-main">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-sub-headline">
+                                         Suche
+                                      </div>
+                                      <div class="navigation-search" data-js-search-flyout-config="{&#39;name&#39;:&#39;consumer&#39;,&#39;typesearchUrl&#39;:&#39;/suche/typesearch&#39;, &#39;wf&#39;:337024}">
+                                         <form name="consumersearch" autocomplete="off" role="form" class="navigation-search-form" action="#" method="GET">
+                                            <fieldset><input type="text" name="q" title="" class="form-control main-input" autocomplete="off" placeholder="Suchbegriff" data-tracking-action="form" data-tracking-description="cms__cms/home/view_Suchbegriff" value=""><input type="text" name="q" title="" class="form-control autocomplete-input" autocomplete="off" data-tracking-action="form" data-tracking-description="cms__cms/home/view_Suchbegriff" value=""></fieldset>
+                                         </form>
+                                         <div class="navigation-search-results"></div>
+                                         <div class="navigation-search-quick-links">
+                                            <ul>
+                                               <li class="navigation-search-quick-links-item"><a href="#" title="o2 Shops in der Nähe" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_O2 Shops in der Nähe">O<sub>2</sub>Shops in der Nähe</a></li>
+                                               <li class="navigation-search-quick-links-item"><a href="#" title="Workshops &amp; Events" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Workshops &amp; Events">Workshops &amp; Events</a></li>
+                                               <li class="navigation-search-quick-links-item"><a href="#" title="Kontakt" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Kontakt">Kontakt</a></li>
+                                            </ul>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </li>
+                          </ul>
+                       </nav>
+                       <nav class="navigation-cockpit">
+                          <ul>
+                             <li class="navigation-item navigation-item-cockpit navigation-item-cart js-enhanced">
+                                <a href="#" class="navigation-label" title="Warenkorb" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_cart"><span class="glyphicon glyphicon-cart"></span></a>
+                                <div class="navigation-sub navigation-sub-cockpit">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-cart">
+                                         <div class="navigation-cart-title">
+                                            <div class="glyphicon glyphicon-cart"></div>
+                                            Warenkorb
+                                         </div>
+                                         <div data-js-navigation-cart-container="">
+                                            <div class="navigation-cart-empty">Es befinden sich keine Artikel im Warenkorb.</div>
+                                            <div class="navigation-cart-buttons">
+                                               <a class="btn navigation-cart-buttons-continue" href="#">Weiter einkaufen</a>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </li>
+                             <li class="navigation-item navigation-item-cockpit navigation-item-search js-enhanced">
+                                <a href="#" class="navigation-label" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_search"><span class="glyphicon glyphicon-search"></span></a>
+                                <div class="navigation-sub navigation-sub-cockpit">
+                                   <div class="navigation-sub-content">
+                                      <div class="navigation-search" data-js-search-flyout-config="{&#39;name&#39;:&#39;consumer&#39;,&#39;typesearchUrl&#39;:&#39;/suche/typesearch&#39;, &#39;wf&#39;:337024}">
+                                         <form name="consumersearch" autocomplete="off" role="form" class="navigation-search-form" action="#" method="GET">
+                                            <fieldset><input type="text" name="q" title="" class="form-control main-input" autocomplete="off" placeholder="Suchbegriff" data-tracking-action="form" data-tracking-description="cms__cms/home/view_Suchbegriff" value=""><input type="text" name="q" title="" class="form-control autocomplete-input" autocomplete="off" data-tracking-action="form" data-tracking-description="cms__cms/home/view_Suchbegriff" value=""></fieldset>
+                                         </form>
+                                         <div class="navigation-search-results"></div>
+                                         <div class="navigation-search-quick-links">
+                                            <ul>
+                                               <li class="navigation-search-quick-links-item"><a href="#" title="o2 Shops in der Nähe" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_O2 Shops in der Nähe">O<sub>2</sub>Shops in der Nähe</a></li>
+                                               <li class="navigation-search-quick-links-item"><a href="#" title="Workshops &amp; Events" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Workshops &amp; Events">Workshops &amp; Events</a></li>
+                                               <li class="navigation-search-quick-links-item"><a href="#" title="Kontakt" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Kontakt">Kontakt</a></li>
+                                            </ul>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </li>
+                             <li class="navigation-item navigation-item-cockpit navigation-item-login navigation-item-logged-out">
+                                <a href="#" class="navigation-label" title="Mein o2" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_user"><span class="glyphicon glyphicon-user"></span>My O<sub>2</sub></a>
+                                <div class="navigation-sub navigation-sub-cockpit">
+                                   <div class="navigation-sub-content">
+                                      <ul class="navigation-login">
+                                         <li class="navigation-login-block navigation-link-list"></li>
+                                         <li class="navigation-login-block navigation-link-list"></li>
+                                         <li class="navigation-login-block navigation-link-list"></li>
+                                         <li class="navigation-login-block">
+                                            <div class="navigation-login-block-label"><span class="glyphicon glyphicon-user"></span>My O<sub>2</sub></div>
+                                            <ul>
+                                               <li><a class="btn btn-beta">Logout</a></li>
+                                               <li><a href="#" class="link" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Login">Personal Page</a></li>
+                                               <li><a href="#" class="link" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Login">My Account</a></li>
+                                            </ul>
+                                         </li>
+                                      </ul>
+                                      <div class="navigation-buttons"><a href="#" class="navigation-more" data-tracking-action="subnavi" data-tracking-description="cms__cms/home/view_Zur Mein O2-Startseite">Zur My O<sub>2</sub>-Startseite</a></div>
+                                   </div>
+                                </div>
+                             </li>
+                          </ul>
+                       </nav>
+                       <div id="routingwidget" class="modal asm-routing-widget fade js-enhanced" tabindex="-1" role="dialog">
+                          <div class="modal-dialog modal-md js-enhanced" role="document">
+                             <div class="modal-content">
+                                <div class="modal-body">
+                                   <span data-dismiss="modal" class="glyphicon glyphicon-close"></span>
+                                   <div class="headline">Direkt zu den idealen Business-Angeboten</div>
+                                   <div class="content">
+                                      <div class="selection">Mitarbeiterzahl wählen</div>
+                                      <div class="slider-wrapper">
+                                         <div class="vue-slider vue-slider-ltr">
+                                            <div class="vue-slider-rail">
+                                               <div class="vue-slider-process"></div>
+                                               <div class="vue-slider-marks">
+                                                  <div class="vue-slider-mark vue-slider-mark-active">
+                                                     <div class="vue-slider-mark-step vue-slider-mark-step-active"></div>
+                                                     <div class="vue-slider-mark-label vue-slider-mark-label-active">0</div>
+                                                  </div>
+                                                  <div class="vue-slider-mark">
+                                                     <div class="vue-slider-mark-step"></div>
+                                                     <div class="vue-slider-mark-label">1</div>
+                                                  </div>
+                                                  <div class="vue-slider-mark">
+                                                     <div class="vue-slider-mark-step"></div>
+                                                     <div class="vue-slider-mark-label">5</div>
+                                                  </div>
+                                                  <div class="vue-slider-mark">
+                                                     <div class="vue-slider-mark-step"></div>
+                                                     <div class="vue-slider-mark-label">bis 9</div>
+                                                  </div>
+                                                  <div class="vue-slider-mark">
+                                                     <div class="vue-slider-mark-step"></div>
+                                                     <div class="vue-slider-mark-label">50</div>
+                                                  </div>
+                                                  <div class="vue-slider-mark">
+                                                     <div class="vue-slider-mark-step"></div>
+                                                     <div class="vue-slider-mark-label">100</div>
+                                                  </div>
+                                                  <div class="vue-slider-mark">
+                                                     <div class="vue-slider-mark-step"></div>
+                                                     <div class="vue-slider-mark-label">100+</div>
+                                                  </div>
+                                               </div>
+                                               <div class="vue-slider-dot">
+                                                  <div class="vue-slider-dot-handle"></div>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                      <p>Die Angabe lässt sich jederzeit ändern: einfach mit erneutem Klick auf den Menüpunkt „Geschäftskunden“.</p>
+                                      <a href="#" class="btn disabled">Weiter zum passenden Angebot</a>
+                                      <div class="panel-group section-accordion">
+                                         <div class="panel">
+                                            <a data-toggle="collapse" href="#" class="collapsed js-enhanced">Warum ist das wichtig?</a>
+                                            <div id="routingwidget-accordion" class="accordion-content collapse">
+                                               <div class="article js-enhanced">Je nach Anzahl der Verträge bieten wir individuell optimierte Konditionen. So sind z.B. unsere <a href="http://3.8.23.18/vorteile/fuer-selbstaendige/">Angebote für Selbständige</a> perfekt auf wenige Nutzer abgestimmt – während die <a href="http://3.8.23.18/business/">O2 Business Angebote</a>exklusive Vorteile für viele Mitarbeiter bieten.</div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </header>
+                 <div class="navigation-overlay"></div>
+              </div>
+           </div>
+           <div class="ai-preloader ">
+              <div class="ai-preloader-inner h-100 d-flex align-items-center justify-content-center">
+                 <div class="ai-child ai-bounce1"></div>
+                 <div class="ai-child ai-bounce2"></div>
+                 <div class="ai-child ai-bounce3"></div>
+              </div>
+           </div>
+           <div class="app" id="content" data-co-uitest-element="shop-configurator">
+              <input type="hidden" value="1000">
+              <section class="section section-invert">
+                 <div class="inner">
+                    <div class="item-collection item-collection-2-columns-wide-narrow">
+                       <div class="items">
+                            <div id="root"></div>
+                       </div>
+                    </div>
+                 </div>
+              </section>
+           </div>
+           <div id="bottom">
+              <section class="section section-light" id="id-60096">
+                 <div class="inner">
+                    <div class="item-collection item-collection-desktop item-collection-spaced" id="id-59494">
+                       <div class="items">
+                          <div class="item-collection item-collection-desktop item-collection-wide" id="id-642576">
+                             <div class="items">
+                                <article class="teaser teaser-footer teaser-no-link js-enhanced">
+                                   <div class="figures">
+                                      <figure class="figure"><span class="glyphicon glyphicon-envelope"></span></figure>
+                                   </div>
+                                   <div class="content">
+                                      <div class="headline">O<sub>2</sub> Newsflash: Exklusive Vorteile &amp; Rabattaktionen</div>
+                                      <div class="form-title table-title"><span class="title-info">* Pflichtfeld</span></div>
+                                      <form name="email-formular" role="form" action="https://www.o2online.de/" method="post" enctype="application/x-www-form-urlencoded" class="form-validation form-newsletter js-enhanced" novalidate="true">
+                                         <fieldset>
+                                            <input type="hidden" name="webFormId" value="59472"><input type="hidden" name="channelId" value="60352">
+                                            <div class="form-group form-group-line">
+                                               <div class="input  required"><input type="email" name="email" class="form-control" placeholder="E-Mail-Adresse" data-error="Bitte gib eine korrekte E-Mail-Adresse ein." required="" pattern=".*" data-tracking-action="form" data-tracking-description="cms__cms/home/view_email" value=""><span class="help-block with-errors"><span data-js-server-side-message=""></span></span></div>
+                                               <div class="form-inline-buttons"><button class="btn btn-beta btn-block" type="submit" data-tracking-action="button" data-tracking-description="cms__cms/home/view_Kostenlos anmelden">Kostenlos anmelden</button></div>
+                                            </div>
+                                            <div class="form-group form-group-line">
+                                               <div class="input checkbox-inline required"><input type="checkbox" class="form-control" name="datenschutz" id="id-59470-336002" data-error="Wir benötigen dein Einverständnis." required="" data-tracking-action="checkbox" data-tracking-description="cms__cms/home/view_Ich bin mindestens 16 Jahre alt und einverstanden, von O2 interessenbezogen per E-Mail über Produktangebote von O2 informiert zu werden. Ich bin ebenfalls damit einverstanden, dass O2 mein Nutzerverhalten auf den Websites, Formularen und mobilen Apps von O2 nach Klick auf einen Link im Newsletter mittels Cookie nachvollzieht und verarbeitet. Dies dient zur Profilbildung zur passenden Angebotserstellung und zur Feststellung, ob ich online ein O2 Produkt bestelle. Ich kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem ich mich vom Newsletter abmelde. Allgemeine Informationen zur Datenverarbeitung bei O2 und zu Cookies sind in unserer Datenschutzerklärung zu finden." value="datenschutz"><label for="id-59470-336002">Ich bin mindestens 16 Jahre alt und einverstanden, von <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-224910" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="224910">O<sub>2</sub></a> <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-333648" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="333648">interessenbezogen</a> per E-Mail über <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-333650" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="333650">Produktangebote von O<sub>2</sub></a> informiert zu werden. Ich bin ebenfalls damit einverstanden, dass <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-224910" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="224910">O<sub>2</sub></a> mein Nutzerverhalten auf den Websites, Formularen und mobilen Apps von <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-224910" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="224910">O<sub>2</sub></a> nach Klick auf einen Link im Newsletter mittels <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-335980" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="335980">Cookie</a> nachvollzieht und <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-335982" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="335982">verarbeitet</a>. Dies dient zur<a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-335984" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="335984">Profilbildung</a> zur passenden Angebotserstellung und zur Feststellung, ob ich online ein<a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-333650" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="333650">O<sub>2</sub> Produkt</a>bestelle. Ich kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem ich mich vom Newsletter <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-335986" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="335986">abmelde</a>. Allgemeine Informationen zur Datenverarbeitung bei <a rel="nofollow" href="http://3.8.23.18/productDetails/Apple_IPhone_X#id-224910" class="modal-link " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_" data-cms-page="60352" data-js="modals" data-cms-target="224910">O<sub>2</sub></a> und zu Cookies sind in unserer <a href="https://www.o2online.de/recht/datenschutz/" class="" title="Datenschutz bei o2" target="_self" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Datenschutz bei O2">Datenschutzerklärung</a>zu finden.</label><span class="help-block with-errors"><span data-js-server-side-message=""></span></span></div>
+                                            </div>
+                                            <input type="hidden" name="interact_id" class="form-control" data-tracking-action="form" data-tracking-description="cms__cms/home/view_interact_id" value="g4C-Vy4lCe4_8Uvn1FW6"><input type="hidden" name="moi" class="form-control" data-tracking-action="form" data-tracking-description="cms__cms/home/view_moi" value="144c527ee6827ac1"><input type="hidden" name="haspermission2" class="form-control" data-tracking-action="form" data-tracking-description="cms__cms/home/view_haspermission2" value="true">
+                                            <div class="section-btns"></div>
+                                         </fieldset>
+                                      </form>
+                                      <article class="article article-wide js-enhanced" id="id-59490">
+                                         <div class="body-text">
+                                            <p><span class="small">Für nicht interessenbezogene Newsletter bitte <a href="#" class="" target="_self" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_">hier</a>anmelden. </span></p>
+                                            <p><a href="#" class="link-bold link" title="Mehr erfahren" target="_self" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Mehr erfahren"><span class="small">Mehr erfahren</span></a></p>
+                                         </div>
+                                      </article>
+                                   </div>
+                                </article>
+                             </div>
+                          </div>
+                          <div class="item-collection item-collection-desktop item-collection-wide" id="id-642574">
+                             <div class="items">
+                                <article class="teaser teaser-footer js-enhanced">
+                                   <div class="figures">
+                                      <figure class="figure"><span class="glyphicon glyphicon-retail"></span></figure>
+                                   </div>
+                                   <div class="content">
+                                      <div class="headline">O<sub>2</sub> Shops &amp; Filialen</div>
+                                      <div class="text">
+                                         <p>Unsere Berater stehen dir vor Ort gerne zur Verfügung.</p>
+                                      </div>
+                                   </div>
+                                   <ul class="links">
+                                      <li><a href="#" title="o2 Shop in meiner Nähe" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_O2 Shops &amp; Filialen">O<sub>2</sub>Shop in meiner Nähe</a></li>
+                                   </ul>
+                                </article>
+                                <article class="teaser teaser-footer js-enhanced">
+                                   <div class="figures">
+                                      <figure class="figure"><span class="glyphicon glyphicon-comment"></span></figure>
+                                   </div>
+                                   <div class="content">
+                                      <div class="headline">Feedback zur Website</div>
+                                      <div class="text">
+                                         <p>Schreibe uns gerne deine Ideen und Kritik</p>
+                                      </div>
+                                   </div>
+                                   <ul class="links">
+                                      <li><a href="#" title="Feedback geben" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Feedback zur Website">Feedback geben</a></li>
+                                   </ul>
+                                </article>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+
+                    <div class="item-collection " id="id-60040">
+                       <div class="items">
+                          <footer class="footer">
+                             <section class="sitemap">
+                                <div class="inner">
+                                   <div class="item">
+                                      <a href="#" class="item-headline" title="Handys &amp; Smartphones " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Handys &amp; Smartphones ">Handys &amp; Smartphones </a>
+                                      <ul>
+                                         <li><a href="#" title="Black Friday &amp; Cyber Monday" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Black Friday &amp; Cyber Monday">Black Friday &amp; Cyber Monday</a></li>
+                                         <li><a href="#" title="Tablets" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Tablets">Tablets</a></li>
+                                         <li><a href="#" title="iPhone mit Vertrag" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_iPhone mit Vertrag">iPhone mit Vertrag</a></li>
+                                         <li><a href="#" title="Samsung Handys" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Samsung Handys">Samsung Handys</a></li>
+                                         <li><a href="#" title="Huawei Handys" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Huawei Handys">Huawei Handys</a></li>
+                                         <li><a href="#" title="Android Smartphones" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Android Smartphones">Android Smartphones</a></li>
+                                      </ul>
+                                   </div>
+                                   <div class="item">
+                                      <a href="#" class="item-headline" title="Handyvertrag bei o2 " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Handyvertrag bei O2 ">Handyvertrag bei O<sub>2</sub> </a>
+                                      <ul>
+                                         <li><a href="#" title="Datentarife" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Datentarife">Datentarife</a></li>
+                                         <li><a href="#" title="o2 Connect" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_O2 Connect">O<sub>2</sub>Connect</a></li>
+                                         <li><a href="#" title="Prepaid-Tarife " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Prepaid-Tarife ">Prepaid-Tarife</a></li>
+                                         <li><a href="#" title="Kombi-Vorteil für o2 Kunden " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Kombi-Vorteil für O2 Kunden ">Kombi-Vorteil für O<sub>2</sub> Kunden </a></li>
+                                         <li><a href="#" title="Auslandstarife" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Auslandstarife">Auslandstarife</a></li>
+                                      </ul>
+                                   </div>
+                                   <div class="item">
+                                      <a href="#" class="item-headline" title="DSL &amp; Festnetz " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_DSL &amp; Festnetz ">DSL &amp; Festnetz </a>
+                                      <ul>
+                                         <li><a href="#" title="VDSL" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_VDSL">VDSL</a></li>
+                                         <li><a href="#" title="DSL Verfügbarkeit prüfen " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_DSL Verfügbarkeit prüfen ">DSL Verfügbarkeit prüfen </a></li>
+                                         <li><a href="#" title="DSL Wechselservice " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_DSL Wechselservice ">DSL Wechselservice </a></li>
+                                         <li><a href="#" title="o2 DSL Service Suite " data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_O2 DSL Service Suite ">O<sub>2</sub>DSL Service Suite </a></li>
+                                         <li><a href="#" title="o2 HomeSpot" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_O2 HomeSpot">O<sub>2</sub>HomeSpot</a></li>
+                                      </ul>
+                                   </div>
+                                   <div class="item"><a class="item-headline" href="#">New Arrivals</a><a class="item-headline" href="#">Women</a><a class="item-headline" href="#">Men</a><a class="item-headline" href="#">Blog</a><a class="item-headline" href="#">Service</a><a href="#">Vlocity Demo</a></div>
+                                </div>
+                             </section>
+                             <section class="footer-nav">
+                                <div class="inner">
+                                   <nav>
+                                      <ul>
+                                         <li><a href="#" title="Kontakt" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Kontakt">Kontakt</a></li>
+                                         <li><a href="#" title="Impressum" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Impressum">Impressum</a></li>
+                                         <li><a href="#" title="Übersicht der Allgemeinen Geschäftsbedingungen von o2" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_AGB">AGB</a></li>
+                                         <li><a href="#" title="Übersicht über die Produktinformationsblätter von o2" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Produktinformationsblatt">Produktinformationsblatt</a></li>
+                                         <li><a href="#" title="Datenschutz" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Datenschutz">Datenschutz</a></li>
+                                         <li><a href="#" title="Cookies" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Cookies">Cookies</a></li>
+                                      </ul>
+                                   </nav>
+                                </div>
+                             </section>
+                             <div class="bar social-bar">
+                                <ul>
+                                   <li><a href="#" class="social-icon-dark social-icon social-icon-facebook" title="o2 auf Facebook" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_facebook"><span class="glyphicon glyphicon-facebook"></span></a></li>
+                                   <li><a href="#" class="social-icon-dark social-icon social-icon-twitter" title="o2 auf Twitter" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_twitter"><span class="glyphicon glyphicon-twitter"></span></a></li>
+                                   <li><a href="#" class="social-icon-dark social-icon social-icon-youtube" title="o2 auf YouTube" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_youtube"><span class="glyphicon glyphicon-youtube"></span></a></li>
+                                   <li><a href="#" class="social-icon-dark social-icon social-icon-instagram" title="o2 auf Instagram" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_instagram"><span class="glyphicon glyphicon-instagram"></span></a></li>
+                                </ul>
+                             </div>
+                             <section class="footer-copyright">
+                                <div class="inner"><a href="#" title="Telefónica" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_© Telefónica Germany GmbH &amp; Co. OHG">© Telefónica Germany GmbH &amp; Co. OHG</a><a href="https://www.telefonica.de/" class="endorsement" title="Telefónica" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Telefónica"><img src="/public/images/telefonica-logo-image-picture-data.png" title="Telefónica" alt="Telefónica"></a></div>
+                             </section>
+                          </footer>
+                       </div>
+                    </div>
+                    <div class="contact-link js-enhanced contact-link-animate">
+                       <div class="contact-link-wrapper">
+                          <div class="contact-link-list-wrapper">
+                             <div class="contact-link-items-wrapper">
+                                <div class="contact-link-items">
+                                   <h3>Wie können wir dir helfen?</h3>
+                                   <div class="contact-link-item">
+                                      <article class="teaser teaser-quick-content js-enhanced">
+                                         <div class="figures">
+                                            <figure class="figure"><span class="glyphicon glyphicon-phone"></span></figure>
+                                         </div>
+                                         <div class="content">
+                                            <div class="headline">Bestellhotline 0800 123 77 55</div>
+                                            <div class="subline">Mo.-Fr. 8-20 Uhr, Sa. 10-18 Uhr</div>
+                                         </div>
+                                         <ul class="links">
+                                            <li><a href="#" class="modal-link" title="Bestell-Hotline" rel="nofollow" data-cms-page="60352" data-js="modals" data-cms-target="79140" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Bestellhotline 0800 123 77 55"><span class="glyphicon glyphicon-phone"></span>Bestellhotline 0800 123 77 55</a></li>
+                                         </ul>
+                                      </article>
+                                   </div>
+                                   <div class="contact-link-item">
+                                      <article class="teaser teaser-quick-content js-enhanced">
+                                         <div class="figures">
+                                            <figure class="figure"><span class="glyphicon glyphicon-video-cam"></span></figure>
+                                         </div>
+                                         <div class="content">
+                                            <div class="headline">O<sub>2</sub> VideoChat</div>
+                                            <div class="subline">Mo.-Fr. 9-20 Uhr, Sa 10-18 Uhr</div>
+                                         </div>
+                                         <ul class="links">
+                                            <li><a href="#" title="Video-Chat von o2" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_O2 VideoChat"></a></li>
+                                         </ul>
+                                      </article>
+                                   </div>
+                                   <div class="contact-link-item">
+                                      <article class="teaser teaser-quick-content js-enhanced">
+                                         <div class="figures">
+                                            <figure class="figure"><span class="glyphicon glyphicon-circle-plus"></span></figure>
+                                         </div>
+                                         <div class="content">
+                                            <div class="headline">Weitere Bestellmöglichkeiten</div>
+                                         </div>
+                                      </article>
+                                      <div class="contact-link-items">
+                                         <a class="link link-back" href="#">Zurück</a>
+                                         <div class="contact-link-item">
+                                            <article class="teaser teaser-quick-content js-enhanced">
+                                               <div class="figures">
+                                                  <figure class="figure"><span class="glyphicon glyphicon-chat"></span></figure>
+                                               </div>
+                                               <div class="content">
+                                                  <div class="headline">Bestellchat</div>
+                                                  <div class="subline">Mo.-Fr. 8-20 Uhr, Sa. 10-18 Uhr</div>
+                                               </div>
+                                               <ul class="links">
+                                                  <li><a href="#" title="Handys mit Vertrag" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Bestellchat"></a></li>
+                                               </ul>
+                                            </article>
+                                         </div>
+                                         <div class="contact-link-item">
+                                            <article class="teaser teaser-quick-content js-enhanced">
+                                               <div class="figures">
+                                                  <figure class="figure"><span class="glyphicon glyphicon-download"></span></figure>
+                                               </div>
+                                               <div class="content">
+                                                  <div class="headline">Visitenkarte downloaden</div>
+                                                  <div class="subline">Erreichbarkeiten der O<sub>2</sub> Kanäle</div>
+                                               </div>
+                                               <ul class="links">
+                                                  <li><a href="#" title="Hotlines in der Übersicht" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Visitenkarte downloaden"></a></li>
+                                               </ul>
+                                            </article>
+                                         </div>
+                                         <div class="contact-link-item">
+                                            <article class="teaser teaser-quick-content js-enhanced">
+                                               <div class="figures">
+                                                  <figure class="figure"><span class="glyphicon glyphicon-map-marker"></span></figure>
+                                               </div>
+                                               <div class="content">
+                                                  <div class="headline">O<sub>2</sub> Shop in deiner Nähe</div>
+                                                  <div class="subline">Jetzt suchen</div>
+                                               </div>
+                                               <ul class="links">
+                                                  <li><a href="#" title="o2 Shops" target="_blank" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_O2 Shop in deiner Nähe"></a></li>
+                                               </ul>
+                                            </article>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="contact-link-item">
+                                      <article class="teaser teaser-quick-content js-enhanced">
+                                         <div class="figures">
+                                            <figure class="figure"><span class="glyphicon glyphicon-circle-question"></span></figure>
+                                         </div>
+                                         <div class="content">
+                                            <div class="headline">Hilfe im Service-Bereich</div>
+                                            <div class="subline">Hilfe suchen und finden</div>
+                                         </div>
+                                         <ul class="links">
+                                            <li><a href="#" title="o2 Service-Bereich" data-tracking-action="textlink" data-tracking-description="cms__cms/home/view_Hilfe im Service-Bereich"></a></li>
+                                         </ul>
+                                      </article>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                          <a class="contact-link-button" href="#">
+                             <span class="glyphicon glyphicon-phone"></span>
+                             <div class="contact-link-alert">
+                                <div class="contact-link-alert-text">Wie können wir dir helfen?</div>
+                             </div>
+                          </a>
+                       </div>
+                       <div class="contact-link-overlay"></div>
+                    </div>
+                 </div>
+              </section>
+           </div>
+        </div>
+     </div>
+    <script src="./js/vendor.js"></script>
+    <script type="text/javascript" src="js/core.js" async></script>
+    <script type="text/javascript" src="js/app-bar.js" async></script>
+    <script type="text/javascript" src="js/app-foo.js" async></script>
+<script type="text/javascript" src="js/core.js" async></script><script type="text/javascript" src="js/order-summary.js" async></script><script type="text/javascript" src="js/product-details.js" async></script></body>
 </html>
