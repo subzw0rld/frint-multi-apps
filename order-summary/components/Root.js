@@ -10,7 +10,7 @@ class Root extends Component {
             color: this.props.color,
             backgroundColor: this.props.color
         };
-
+console.log("props-bar ", this.props)
         return (
             <div>
                 <h5>App: Bar</h5>
@@ -39,6 +39,7 @@ class Root extends Component {
                 <p>
                     Counter value from <strong>Foo</strong>:
                     <code>{this.props.counter}</code>
+                    <span>{this.props.text}</span>
                 </p>
             </div>
         )
@@ -60,10 +61,15 @@ export default observe((app) => {
         )
 
         .set(
-            app.getAppOnceAvailable$('FooApp'),
+            app.getAppOnceAvailable$('ProductDetails'),
             fooApp => fooApp.get('store').getState$(),
-            fooState => ({ counter: fooState.counter.value })
+            fooState => ({ counter: fooState.counter.value })  
         )
 
+        .set(
+            app.getAppOnceAvailable$('ProductDetails'),
+            fooApp => fooApp.get('store').getState$(),
+            fooState => ({ text: fooState.text.value })   
+        )
         .get$();
 })(Root);

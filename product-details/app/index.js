@@ -1,12 +1,12 @@
 import { createApp } from 'frint';
-import { createStore } from 'frint-store';
+import {createStore} from 'frint-store';
 
 import RootComponent from '../components/Root';
 import rootReducer from '../reducers';
-import { DEFAULT_COLOR } from '../constants';
+import { DEFAULT_TEXT } from '../constants';
 
 export default createApp({
-    name: 'BarApp',
+    name: 'ProductDetails',
     providers: [
         {
             name: 'component',
@@ -17,13 +17,16 @@ export default createApp({
             useFactory: ({app}) => {
                 const Store = createStore({
                     initialState: {
-                        color: {
-                            value: DEFAULT_COLOR
+                        counter: {
+                            value: 0
+                        },
+                        text: {
+                            value : DEFAULT_TEXT
                         }
                     },
 
                     reducer: rootReducer
-                })
+                });
 
                 return new Store();
             },
