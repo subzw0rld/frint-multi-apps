@@ -17,7 +17,7 @@ export default function counter(state = INITIAL_STATE, action) {
 
         case DECREMENT_COUNTER: 
             return Object.assign({}, {
-                value: state.value - 1
+                value: state.value === 1 ? state.value : state.value - 1
             });
         
         default:

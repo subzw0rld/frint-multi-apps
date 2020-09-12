@@ -11,28 +11,30 @@ class Root extends Component {
             color: this.props.color,
             backgroundColor: this.props.color
         };
-console.log("ppp---", this.props)
+
         return (
             <div>
-                <h5>App: Foo</h5>
-
+                <h5>
+                    Apple iPhone  <span>{this.props.text}</span>
+                </h5>
                 <p>
-                    Counter value in
-                    <strong>Foo</strong>:
-                    <code>{this.props.counter}</code>
+                    Quantity :  
+                    <span>{this.props.counter}</span>
+                </p>
+                <p>
+                    Color : 
+                    <code style={codeStyle}>
+                        {this.props.color}
+                    </code>
                 </p>
 
                 <div>
                     <button className="button button-primary" onClick={() => this.props.incrementCounter()}> + </button>
                     <button className="button" onClick={() => this.props.decrementCounter()}> - </button>
                 </div>
-                <p>
-                    Color value from
-                    <strong>Bar</strong>:
-                    <code style={codeStyle}>{this.props.color}</code>
-                </p>
 
                 <div>
+                    <h6> Selection Variants :</h6>
                     <button className="button"
                         style={{ borderColor: '#F88' }}
                         onClick={() => this.props.changeText(GREEN_TEXT)}>

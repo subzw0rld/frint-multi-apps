@@ -13,10 +13,15 @@ class Root extends Component {
 console.log("props-bar ", this.props)
         return (
             <div>
-                <h5>App: Bar</h5>
-
+                <h5>
+                    Apple iPhone  <span>{this.props.text}</span>
+                </h5>
                 <p>
-                    Color value in <strong>Bar</strong>:
+                    Quantity :  
+                    <span>{this.props.counter}</span>
+                </p>
+                <p>
+                    Color : 
                     <code style={codeStyle}>
                         {this.props.color}
                     </code>
@@ -36,11 +41,7 @@ console.log("props-bar ", this.props)
                     </button>
                 </div>
 
-                <p>
-                    Counter value from <strong>Foo</strong>:
-                    <code>{this.props.counter}</code>
-                    <span>{this.props.text}</span>
-                </p>
+                
             </div>
         )
     }

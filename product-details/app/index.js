@@ -18,7 +18,7 @@ export default createApp({
                 const Store = createStore({
                     initialState: {
                         counter: {
-                            value: 0
+                            value: 1
                         },
                         text: {
                             value : DEFAULT_TEXT
