@@ -10,6 +10,10 @@ class Root extends Component {
             color: this.props.color,
             backgroundColor: this.props.color
         };
+        let amount = this.props.counter * 150,
+        tax = 34, delivery = 19 ;
+        let total = amount + delivery + tax;
+        
 console.log("props-bar ", this.props)
         return (
             <div class="shop-tile-scroll-wrapper">
@@ -27,12 +31,12 @@ console.log("props-bar ", this.props)
                       <div class="col-md-6">
                           <div class="shop-tile-slide-content">
                               <h2 class="shop-tile-h3">Apple IPhone X <span>{this.props.text}</span></h2>
-                              <p>Qty:<span>{this.props.counter}</span></p>
-                              
+                              <p>Qty:<span>{this.props.counter}</span> </p>
+                              <p>Color:<span className="selected-variants" style={codeStyle}></span> </p>
                            </div>
                       </div>
                       <div class="col-md-4">
-                          <span>$150</span>
+                          <span>{`$${amount}`}</span>
                       </div>
                     </div>
                     <div class="space-line-30"></div>
@@ -46,7 +50,7 @@ console.log("props-bar ", this.props)
                                </div>
                           </div>
                           <div class="col-md-4">
-                              <span>$150</span>
+                              <span>{`$${amount}`}</span>
                           </div>
                       </div>
                       <div class="row">
@@ -56,7 +60,7 @@ console.log("props-bar ", this.props)
                                </div>
                           </div>
                           <div class="col-md-4">
-                              <span>$19</span>
+                              <span>{`$${delivery}`}</span>
                           </div>
                       </div>
                       <div class="row">
@@ -66,18 +70,18 @@ console.log("props-bar ", this.props)
                                </div>
                           </div>
                           <div class="col-md-4">
-                              <span>$34</span>
+                              <span>{`$${tax}`}</span>
                           </div>
                       </div>
                       <div class="seprator"> </div>
                       <div class="row">
                           <div class="col-md-8">
                               <div class="shop-tile-slide-content">
-                                  <p>Total Price</p>
+                                  <p>Total</p>
                                </div>
                           </div>
                           <div class="col-md-4">
-                              <span>$34</span>
+                              <span>{`$${total}`}</span>
                           </div>
                       </div>
                    </div>
@@ -124,7 +128,7 @@ export default observe((app) => {
     const store = app.get('store');
 
     return streamProps()
-        .setDispatch(
+        /* .setDispatch(
             { changeColor },
             store
         )
@@ -132,18 +136,22 @@ export default observe((app) => {
         .set(
             store.getState$(),
             state => ({ color: state.color.value })
-        )
+        ) */
 
         .set(
             app.getAppOnceAvailable$('ProductDetails'),
             fooApp => fooApp.get('store').getState$(),
             fooState => ({ counter: fooState.counter.value })  
         )
-
         .set(
             app.getAppOnceAvailable$('ProductDetails'),
             fooApp => fooApp.get('store').getState$(),
             fooState => ({ text: fooState.text.value })   
+        )
+        .set(
+            app.getAppOnceAvailable$('ProductDetails'),
+            fooApp => fooApp.get('store').getState$(),
+            fooState => ({ color: fooState.color.value })
         )
         .get$();
 })(Root);

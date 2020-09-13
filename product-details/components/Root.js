@@ -3,7 +3,8 @@ import { observe, streamProps } from 'frint-react';
 
 import { incrementCounter, decrementCounter } from '../actions/counter';
 import { changeText } from '../actions/text';
-import { GREEN_TEXT, RED_TEXT } from '../constants';
+import { changeColor } from '../actions/color';
+import { GREEN_COLOR, RED_COLOR, WHITE_COLOR, BLACK_COLOR,GREEN_TEXT, RED_TEXT } from '../constants';
 
 class Root extends Component {
     render() {
@@ -28,28 +29,32 @@ class Root extends Component {
                   <div className="body-text">
                      <p>Triple camera, awesome 5.8-inch display and the fastest mobile Apple processor ever: the iPhone 11 Pro. Secure a new Pro smartphone now - ideally with a contract from o2.</p>
                   </div>
-                  <div className="switcher select-switcher shop-tile-capacity-switcher">
-                   <div className="switcher-box">
-                       <table className="shop-tile-table">
-                              <tr className="shop-tile-table-content">
-                                 <td className="shop-tile-table-content-item">iPhone MRP Price - OneTime</td>
-                                 <td className="shop-tile-table-content-item">1000 €</td>
-                              </tr>
-                              <tr className="shop-tile-table-content">
-                                 <td className="shop-tile-table-content-item"><strong>Total cost</strong></td>
-                                 <td className="shop-tile-table-content-item"><strong>1000 €</strong></td>
-                              </tr>
-                        </table>
-                   </div>
-                </div>
+                  
                </article>
                <div className="switcher color-switcher">
-                  <div className="section-switcher-text" data-co-uitest-element="active-color-option-display"><strong>Selected color: </strong> Black</div>
+        <div className="section-switcher-text" data-co-uitest-element="active-color-option-display">
+            <strong>Selected color: <span className="selected-variants" style={codeStyle}></span></strong></div>
                   <div className="switcher-box">
+                    <span className="color-variants"
+                         style={{ backgroundColor: WHITE_COLOR, color: '#FFF' }}
+                         onClick={() => this.props.changeColor(WHITE_COLOR)}>
+                     </span>
+                     <span className="color-variants"
+                         style={{ backgroundColor: GREEN_COLOR, color: '#FFF' }}
+                         onClick={() => this.props.changeColor(GREEN_COLOR)}>
+                     </span>
+                     <span className="color-variants"
+                         style={{ backgroundColor: RED_COLOR, color: '#FFF' }}
+                         onClick={() => this.props.changeColor(RED_COLOR)}>
+                     </span>
+                     <span className="color-variants"
+                         style={{ backgroundColor: BLACK_COLOR, color: '#FFF' }}
+                         onClick={() => this.props.changeColor(BLACK_COLOR)}>
+                     </span>
+                     {/*  <span className="color-variants"></span>
                       <span className="color-variants"></span>
                       <span className="color-variants"></span>
-                      <span className="color-variants"></span>
-                      <span className="color-variants"></span>
+                      <span className="color-variants"></span> */}
                      {/* <div className="switcher-item color-switcher-item" data-co-uitest-element="select-color-gold"><input readonly="" type="radio" /><label className="color-switcher-item-label "><img className="color-switcher-item-color" src="/public/images/png-iphone-gold-image-data.png" alt="Apple IPhone X" aria-label="png-iphone-gold-image-data.png" title="png-iphone-gold-image-data.png" /></label></div>
                      <div className="switcher-item color-switcher-item" data-co-uitest-element="select-color-Black"><input readonly="" type="radio" checked="" /><label className="color-switcher-item-label "><img className="color-switcher-item-color" src="/public/images/png-iphone-nachtgruen-image-data.png" alt="Apple IPhone X" aria-label="png-iphone-nachtgruen-image-data.png" title="png-iphone-nachtgruen-image-data.png" /></label></div>
                      <div className="switcher-item color-switcher-item" data-co-uitest-element="select-color-night green"><input readonly="" type="radio" /><label className="color-switcher-item-label "><img className="color-switcher-item-color" src="/public/images/png-iphone-nachtgruen-image-data.png" alt="Apple IPhone X" aria-label="png-iphone-nachtgruen-image-data.png" title="png-iphone-nachtgruen-image-data.png" /></label></div>
@@ -64,7 +69,7 @@ class Root extends Component {
                     <button className="button" onClick={() => this.props.incrementCounter()}> + </button>
                 </div>
                <div className="switcher select-switcher shop-tile-capacity-switcher">
-               <h6> Selection Variants :</h6>
+                    <h6> Selection Variants : {this.props.text}</h6>
                   <div className="switcher-box">
                        
                         <button className="button"
@@ -137,7 +142,7 @@ export default observe((app) => {
     const store = app.get('store');
     
     return streamProps()
-        .setDispatch({ incrementCounter, decrementCounter, changeText }, store)
+        .setDispatch({ incrementCounter, decrementCounter, changeText, changeColor }, store)
         .set(
             store.getState$(),
             state => ({ counter: state.counter.value })
@@ -147,10 +152,14 @@ export default observe((app) => {
             state => ({ text: state.text.value })
         )
         .set(
+            store.getState$(),
+            state => ({ color: state.color.value })
+        )
+       /*  .set(
             app.getAppOnceAvailable$('OrderSummary'),
             barApp => barApp.get('store').getState$(),
             barState => ({ color: barState.color.value })
-        )
+        ) */
 
         .get$();
 })(Root);

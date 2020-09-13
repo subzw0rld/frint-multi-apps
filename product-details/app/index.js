@@ -3,7 +3,7 @@ import {createStore} from 'frint-store';
 
 import RootComponent from '../components/Root';
 import rootReducer from '../reducers';
-import { DEFAULT_TEXT } from '../constants';
+import { DEFAULT_TEXT, DEFAULT_COLOR } from '../constants';
 
 export default createApp({
     name: 'ProductDetails',
@@ -22,6 +22,9 @@ export default createApp({
                         },
                         text: {
                             value : DEFAULT_TEXT
+                        },
+                        color: {
+                            value: DEFAULT_COLOR
                         }
                     },
 
