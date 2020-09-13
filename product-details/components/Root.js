@@ -63,10 +63,11 @@ class Root extends Component {
                      <div className="switcher-item color-switcher-item" data-co-uitest-element="select-color-red"><input readonly="" type="radio" /><label className="color-switcher-item-label "><img className="color-switcher-item-color" src="/public/images/color-red-ping.png" alt="Apple IPhone X" aria-label="color-red-ping.png" title="color-red-ping.png" /></label></div> */}
                   </div>
                </div>
-
-               <div>
-                   <button className="button" onClick={() => this.props.decrementCounter()} style={{ backgroundColor: '#002e6e' , color: "#ffffff"}}> - </button>
-                    <button className="button" onClick={() => this.props.incrementCounter()}> + </button>
+               <h6> Quantity: </h6>
+               <div style={{border: "1px solid #ccc", width: "35%"}}>
+                   <button className="" onClick={() => this.props.decrementCounter()} style={{color: "#333", height: "22px", padding: "0px 15px", border: "1px solid #fff"}}> - </button>
+                    <span>{this.props.counter}</span>
+                    <button className="" onClick={() => this.props.incrementCounter()} style={{color: "#333", height: "22px", padding: "0px 15px", border: "1px solid #fff"}}> + </button>
                 </div>
                <div className="switcher select-switcher shop-tile-capacity-switcher">
                     <h6> Selection Variants : {this.props.text}</h6>

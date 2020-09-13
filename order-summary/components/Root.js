@@ -36,7 +36,7 @@ console.log("props-bar ", this.props)
                            </div>
                       </div>
                       <div class="col-md-4">
-                          <span>{`$${amount}`}</span>
+                          <span>{`€${amount}`}</span>
                       </div>
                     </div>
                     <div class="space-line-30"></div>
@@ -50,7 +50,7 @@ console.log("props-bar ", this.props)
                                </div>
                           </div>
                           <div class="col-md-4">
-                              <span>{`$${amount}`}</span>
+                              <span>{`€${amount}`}</span>
                           </div>
                       </div>
                       <div class="row">
@@ -60,7 +60,7 @@ console.log("props-bar ", this.props)
                                </div>
                           </div>
                           <div class="col-md-4">
-                              <span>{`$${delivery}`}</span>
+                              <span>{`€${delivery}`}</span>
                           </div>
                       </div>
                       <div class="row">
@@ -70,7 +70,7 @@ console.log("props-bar ", this.props)
                                </div>
                           </div>
                           <div class="col-md-4">
-                              <span>{`$${tax}`}</span>
+                              <span>{`€${tax}`}</span>
                           </div>
                       </div>
                       <div class="seprator"> </div>
@@ -81,7 +81,7 @@ console.log("props-bar ", this.props)
                                </div>
                           </div>
                           <div class="col-md-4">
-                              <span>{`$${total}`}</span>
+                              <span>{`€${total}`}</span>
                           </div>
                       </div>
                    </div>
