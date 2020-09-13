@@ -6,15 +6,13 @@ export default class Root extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="eight columns">
+                    <div className="seven columns">
                         <h4>Product Details</h4>
-                        <hr />
                         <Region name="main" />
                     </div>
 
-                    <div className="four columns">
+                    <div className="five columns">
                         <h4>Order Summary</h4>
-                        <hr />
                         <Region name="sidebar" />
                     </div>
                 </div>

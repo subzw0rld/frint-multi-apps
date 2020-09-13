@@ -12,37 +12,110 @@ class Root extends Component {
         };
 console.log("props-bar ", this.props)
         return (
-            <div>
-                <h5>
-                    Apple iPhone  <span>{this.props.text}</span>
-                </h5>
-                <p>
-                    Quantity :  
-                    <span>{this.props.counter}</span>
-                </p>
-                <p>
-                    Color : 
-                    <code style={codeStyle}>
-                        {this.props.color}
-                    </code>
-                </p>
+            <div class="shop-tile-scroll-wrapper">
+            <div class="shop-tile shop-tile-price-summary " style={{position: "relative"}}>
+               <span class="shop-tile-slide-link glyphicon glyphicon-arrow-down"></span>
+               <div class="shop-tile-col">
+                  <div class="shop-tile-slide-content">
+                     <h2 class="shop-tile-h3">Order Summery</h2>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-md-2">
+                          <div class="shop-tile-images"><a href="#" data-toggle="modal"><img src="/public/images/6d61d63f-749e-43c2-b422-dd1fac1654de.png" alt="Apple IPhone X" class="shop-tile-image-product" /></a></div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="shop-tile-slide-content">
+                              <h2 class="shop-tile-h3">Apple IPhone X <span>{this.props.text}</span></h2>
+                              <p>Qty:<span>{this.props.counter}</span></p>
+                              
+                           </div>
+                      </div>
+                      <div class="col-md-4">
+                          <span>$150</span>
+                      </div>
+                    </div>
+                    <div class="space-line-30"></div>
+                    <div class="shop-tile-slide-content">
+                      <h2 class="shop-tile-h3">Price Details:</h2>
+                  
+                      <div class="row">
+                          <div class="col-md-8">
+                              <div class="shop-tile-slide-content">
+                                  <p>Price</p>
+                               </div>
+                          </div>
+                          <div class="col-md-4">
+                              <span>$150</span>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-8">
+                              <div class="shop-tile-slide-content">
+                                  <p>Delivery Charges</p>
+                               </div>
+                          </div>
+                          <div class="col-md-4">
+                              <span>$19</span>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-8">
+                              <div class="shop-tile-slide-content">
+                                  <p >Tax</p>
+                               </div>
+                          </div>
+                          <div class="col-md-4">
+                              <span>$34</span>
+                          </div>
+                      </div>
+                      <div class="seprator"> </div>
+                      <div class="row">
+                          <div class="col-md-8">
+                              <div class="shop-tile-slide-content">
+                                  <p>Total Price</p>
+                               </div>
+                          </div>
+                          <div class="col-md-4">
+                              <span>$34</span>
+                          </div>
+                      </div>
+                   </div>
+                    
+                  </div>
+               </div>
+            </div>
+            // <div>
+            //     <h5>
+            //         Apple iPhone  <span>{this.props.text}</span>
+            //     </h5>
+            //     <p>
+            //         Quantity :  
+            //         <span>{this.props.counter}</span>
+            //     </p>
+                // <p>
+                //     Color : 
+                //     <code style={codeStyle}>
+                //         {this.props.color}
+                //     </code>
+                // </p>
 
-                <div>
-                    <button className="button"
-                        style={{ backgroundColor: GREEN_COLOR, color: '#FFF' }}
-                        onClick={() => this.props.changeColor(GREEN_COLOR)}>
-                        Green
-                    </button>
+            //     <div>
+            //         <button className="button"
+            //             style={{ backgroundColor: GREEN_COLOR, color: '#FFF' }}
+            //             onClick={() => this.props.changeColor(GREEN_COLOR)}>
+            //             Green
+            //         </button>
 
-                    <button className="button"
-                        style={{ backgroundColor: RED_COLOR, color: '#FFF' }}
-                        onClick={() => this.props.changeColor(RED_COLOR)}>
-                        Red
-                    </button>
-                </div>
+            //         <button className="button"
+            //             style={{ backgroundColor: RED_COLOR, color: '#FFF' }}
+            //             onClick={() => this.props.changeColor(RED_COLOR)}>
+            //             Red
+            //         </button>
+            //     </div>
 
                 
-            </div>
+            // </div>
         )
     }
 }
