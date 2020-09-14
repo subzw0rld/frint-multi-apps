@@ -28,6 +28,7 @@ console.log("props-bar ", this.props.cart)
                      <h2 class="shop-tile-h3">Order Summery</h2>
                   </div> */}
                   
+                  
                   <div class="row">
                       <div class="col-md-2">
                           <div class="shop-tile-images"><a href="#" data-toggle="modal"><img src="/public/o2/images/6d61d63f-749e-43c2-b422-dd1fac1654de.png" alt="Apple IPhone X" class="shop-tile-image-product" /></a></div>
