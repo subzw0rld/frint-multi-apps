@@ -21,14 +21,14 @@ class Root extends Component {
                 color : WHITE_COLOR,
                 selected : false
             },
-            {
-                color : GREEN_COLOR,
-                selected : false
-            },
-            {
-                color : RED_COLOR,
-                selected : false
-            },
+            // {
+            //     color : GREEN_COLOR,
+            //     selected : false
+            // },
+            // {
+            //     color : RED_COLOR,
+            //     selected : false
+            // },
             {
                 color : BLACK_COLOR,
                 selected : true
@@ -121,7 +121,7 @@ class Root extends Component {
                </article>
                <div className="switcher color-switcher">
         <div className="section-switcher-text" data-co-uitest-element="active-color-option-display">
-            <strong>Selected color: <span className="selected-variants" style={codeStyle}></span></strong></div>
+            <strong>Selected color: &nbsp;<span className="selected-variants" style={codeStyle}></span></strong></div>
                   <div className="switcher-box">
                     {this.state.colorObj.map((item, key) => {
                         return <span key={key} className= {item.selected ? "color-variants selected-color" : "color-variants"}
@@ -133,16 +133,15 @@ class Root extends Component {
                </div>
                <h6> Quantity: </h6>
                <div className="quanty-input">
-                   <button className="" onClick={() => this.decrementItem()} style={{color: "#333", height: "22px", padding: "0px 15px", border: "1px solid #fff"}}> - </button>
+                   <button className="btn1" onClick={() => this.decrementItem()}> - </button>
                    <div className="quantity-count">{this.state.quantity}</div>
-                    <button className="" onClick={() => this.incrementItem()} style={{color: "#333", height: "22px", padding: "0px 15px", border: "1px solid #fff", float: "right"}}> + </button>
+                    <button className="btn2" onClick={() => this.incrementItem()} > + </button>
                 </div>
                <div className="switcher select-switcher shop-tile-capacity-switcher">
                     <h6> Selected Variants : {this.state.variant}</h6>
                   <div className="switcher-box">
                         {this.state.variantObj.map((item, key) => {
-                            return <button className={item.selected ? "button selected-button" : "button"}
-                                style={{ borderColor: '#e4e6e8' , color: "#0090d0", marginRight: '1rem'}}
+                            return <button className={item.selected ? "button variants selected-button " : "variants button"}
                                 onClick={() => this.changeText(item.variant)}>
                                 {item.variant}
                             </button>
@@ -153,10 +152,10 @@ class Root extends Component {
                 <div className="switcher select-switcher shop-tile-capacity-switcher">
                    <div className="switcher-box">
                        <div className="shop-tile-col">
-                           <a href="#">
+                          
                                <button id="addToCartButton" onClick={() => this.props.addtocart(productObj)} className="btn btn-action btn-plain" data-co-uitest-element="to-cart-button" style={{minHeight: "30px"}}>
                                   Add to Cart
-                              </button></a>
+                              </button>
                       </div>
                    </div>
                 </div>

@@ -53,8 +53,28 @@
     border: 1px solid rgb(204, 204, 204);
     width: 38%;
 }
+.quanty-input .btn1{
+    color: #333;
+    height: 22px;
+    padding: 0px 15px;
+    border: 1px solid #fff;
+}
+
+.quanty-input .btn2{
+    color: #333;
+    height: 22px;
+    padding: 0px 15px;
+    border: 1px solid #fff;
+    float: right
+}
 .quantity-count {
     position: absolute;
     top: 72%;
     left: 53%;
+}
+
+.variants {
+    color: #005896;
+    border-color: #e4e6e8;
+    margin-right: 1rem;
 }

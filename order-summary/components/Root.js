@@ -35,8 +35,8 @@ console.log("props-bar ", this.props.cart)
                       <div class="col-md-6">
                           <div class="shop-tile-slide-content">
                               <h2 class="shop-tile-h3">Apple IPhone X <span>{this.props.cart.variant}</span></h2>
-                              <p>Qty:<span>{this.props.cart.counter}</span> </p>
-                              <p>Color:<span className="selected-variants" style={codeStyle}></span> </p>
+                              <p>Qty: &nbsp;<span>{this.props.cart.counter}</span> </p>
+                              <p>Color: &nbsp;<span className="selected-variants" style={codeStyle}></span> </p>
                            </div>
                       </div>
                       <div class="col-md-4">
