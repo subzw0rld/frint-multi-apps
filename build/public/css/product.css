@@ -37,3 +37,24 @@
 .social-icon.social-icon-dark .glyphicon:hover {
     color: #005896;  
 }
+.selected-button {
+    border-color: #0090d0 !important;
+}
+.selected-color {
+    border: 4px solid #0090d0;
+}
+.cart-empty {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quanty-input {
+    border: 1px solid rgb(204, 204, 204);
+    width: 38%;
+}
+.quantity-count {
+    position: absolute;
+    top: 72%;
+    left: 53%;
+}

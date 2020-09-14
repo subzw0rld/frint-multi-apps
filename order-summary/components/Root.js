@@ -4,24 +4,28 @@ import { observe, streamProps } from 'frint-react';
 import { changeColor } from '../actions/color';
 import { GREEN_COLOR, RED_COLOR } from '../constants';
 
+let product;  
+
 class Root extends Component {
     render() {
-        const codeStyle = {
-            color: this.props.color,
-            backgroundColor: this.props.color
-        };
-        let amount = this.props.counter * 150,
-        tax = 34, delivery = 19 ;
-        let total = amount + delivery + tax;
-        
-console.log("props-bar ", this.props)
+        product = this.props;
+    let codeStyle; 
+    codeStyle = {
+        color: product.cart !== undefined ? this.props.cart.color : '',
+        backgroundColor: product.cart !== undefined ? this.props.cart.color : '',
+    };
+    let amount = product.cart !== undefined ? this.props.cart.counter * 150 : 150,
+    tax = 34, delivery = 19 ;
+    let total = amount + delivery + tax;
+console.log("props-bar ", this.props.cart)
         return (
+            product.cart !== undefined ? 
             <div class="shop-tile-scroll-wrapper">
             <div class="shop-tile shop-tile-price-summary " style={{position: "relative"}}>
                <span class="shop-tile-slide-link glyphicon glyphicon-arrow-down"></span>
                <div class="shop-tile-col">
                   <div class="shop-tile-slide-content">
-                     <h2 class="shop-tile-h3">Order Summery</h2>
+                     <h2 class="shop-tile-h3">Cart Summary</h2>
                   </div>
                   
                   <div class="row">
@@ -30,8 +34,8 @@ console.log("props-bar ", this.props)
                       </div>
                       <div class="col-md-6">
                           <div class="shop-tile-slide-content">
-                              <h2 class="shop-tile-h3">Apple IPhone X <span>{this.props.text}</span></h2>
-                              <p>Qty:<span>{this.props.counter}</span> </p>
+                              <h2 class="shop-tile-h3">Apple IPhone X <span>{this.props.cart.variant}</span></h2>
+                              <p>Qty:<span>{this.props.cart.counter}</span> </p>
                               <p>Color:<span className="selected-variants" style={codeStyle}></span> </p>
                            </div>
                       </div>
@@ -89,38 +93,12 @@ console.log("props-bar ", this.props)
                   </div>
                </div>
             </div>
-            // <div>
-            //     <h5>
-            //         Apple iPhone  <span>{this.props.text}</span>
-            //     </h5>
-            //     <p>
-            //         Quantity :  
-            //         <span>{this.props.counter}</span>
-            //     </p>
-                // <p>
-                //     Color : 
-                //     <code style={codeStyle}>
-                //         {this.props.color}
-                //     </code>
-                // </p>
-
-            //     <div>
-            //         <button className="button"
-            //             style={{ backgroundColor: GREEN_COLOR, color: '#FFF' }}
-            //             onClick={() => this.props.changeColor(GREEN_COLOR)}>
-            //             Green
-            //         </button>
-
-            //         <button className="button"
-            //             style={{ backgroundColor: RED_COLOR, color: '#FFF' }}
-            //             onClick={() => this.props.changeColor(RED_COLOR)}>
-            //             Red
-            //         </button>
-            //     </div>
-
-                
-            // </div>
-        )
+            : <div className="shop-tile-scroll-wrapper">
+                <div className="shop-tile shop-tile-price-summary " style={{position: "relative"}}>
+                <div className="cart-empty"> Cart is empty</div>
+                </div>
+            </div>
+        ) 
     }
 }
 
@@ -153,5 +131,12 @@ export default observe((app) => {
             fooApp => fooApp.get('store').getState$(),
             fooState => ({ color: fooState.color.value })
         )
+
+        .set(
+            app.getAppOnceAvailable$('ProductDetails'),
+            fooApp => fooApp.get('store').getState$(),
+            fooState => ({ cart: fooState.cart.value })
+        )
+
         .get$();
 })(Root);

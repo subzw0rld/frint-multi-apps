@@ -12,7 +12,7 @@ export default class Root extends Component {
                     </div>
 
                     <div className="five columns">
-                        <h4>Order Summary</h4>
+                        <h4>Cart Summary</h4>
                         <Region name="sidebar" />
                     </div>
                 </div>
