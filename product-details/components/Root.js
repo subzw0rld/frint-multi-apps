@@ -3,16 +3,104 @@ import { observe, streamProps } from 'frint-react';
 
 import { incrementCounter, decrementCounter } from '../actions/counter';
 import { changeText } from '../actions/text';
-import { changeColor } from '../actions/color';
+import { changeColor } from '../actions/color'; 
+import { addtocart } from '../actions/cart';
+
 import { GREEN_COLOR, RED_COLOR, WHITE_COLOR, BLACK_COLOR,GREEN_TEXT, RED_TEXT } from '../constants';
 
+const productObj = {}
 class Root extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          quantity: 1,
+          colour: '#000000',
+          variant: '64GB',
+          colorObj :[
+            {
+                color : WHITE_COLOR,
+                selected : false
+            },
+            {
+                color : GREEN_COLOR,
+                selected : false
+            },
+            {
+                color : RED_COLOR,
+                selected : false
+            },
+            {
+                color : BLACK_COLOR,
+                selected : true
+            }
+          ],
+          variantObj : [
+            {
+                variant : GREEN_TEXT,
+                selected : true
+            },
+            {
+                variant : RED_TEXT,
+                selected : false
+            }
+          ]
+        }
+        productObj.color = this.state.colour;
+        productObj.variant = this.state.variant;
+        productObj.counter = this.state.quantity;
+      }
+
+    changeColor(color) {
+        this.state.colorObj.map((item,index) =>{
+            item.color === color ? item.selected = true : item.selected = false;
+        })
+        setTimeout(() => {
+            this.setState({ colour : color, colorObj : this.state.colorObj },
+            function(){
+                productObj.color = this.state.colour;
+            })
+        }, 10)
+       console.log("color---", productObj)
+    }
+    changeText(variant) {
+        this.state.variantObj.map((item,index) =>{
+            item.variant === variant ? item.selected = true : item.selected = false;
+        })
+        setTimeout(() => {
+            this.setState({ variant : variant, variantObj : this.state.variantObj },
+            function(){
+                productObj.variant = this.state.variant;
+            })
+        }, 10)
+        console.log("variant---", productObj)
+    }
+    incrementItem() {
+        setTimeout(() => {
+            this.setState(prevState => { 
+                return {quantity: prevState.quantity + 1 }
+            },
+            function(){
+                productObj.counter = this.state.quantity;
+            })
+        }, 10)
+     }
+    decrementItem() {
+        setTimeout(() => {
+            this.setState(prevState => {
+                return { quantity: prevState.quantity === 1 ?  prevState.quantity : prevState.quantity - 1 }
+            },
+            function(){
+                productObj.counter = this.state.quantity;
+            })
+        }, 10)
+    }
+
     render() {
         const codeStyle = {
-            color: this.props.color,
-            backgroundColor: this.props.color
+            color: this.state.colour,
+            backgroundColor: this.state.colour
         };
-
+        console.log("obj---", productObj)
         return (
             <div className="shop-tile">
             <div className="shop-tile-header">
@@ -23,7 +111,7 @@ class Root extends Component {
             </div>
             <div className="shop-tile-col">
                <p><strong className="shop-tile-marketing-teaser">Triple camera with ultra wide angle</strong></p>
-               <h2 className="shop-tile-h2">Apple IPhone X <span>{this.props.text}</span></h2>
+               <h2 className="shop-tile-h2">Apple IPhone X <span>{this.state.variant}</span></h2>
                <div className="reviews-item-meta"></div>
                <article className="article js-enhanced">
                   <div className="body-text">
@@ -35,45 +123,30 @@ class Root extends Component {
         <div className="section-switcher-text" data-co-uitest-element="active-color-option-display">
             <strong>Selected color: <span className="selected-variants" style={codeStyle}></span></strong></div>
                   <div className="switcher-box">
-                    <span className="color-variants"
-                         style={{ backgroundColor: WHITE_COLOR, color: '#FFF' }}
-                         onClick={() => this.props.changeColor(WHITE_COLOR)}>
-                     </span>
-                     <span className="color-variants"
-                         style={{ backgroundColor: GREEN_COLOR, color: '#FFF' }}
-                         onClick={() => this.props.changeColor(GREEN_COLOR)}>
-                     </span>
-                     <span className="color-variants"
-                         style={{ backgroundColor: RED_COLOR, color: '#FFF' }}
-                         onClick={() => this.props.changeColor(RED_COLOR)}>
-                     </span>
-                     <span className="color-variants"
-                         style={{ backgroundColor: BLACK_COLOR, color: '#FFF' }}
-                         onClick={() => this.props.changeColor(BLACK_COLOR)}>
-                     </span>
-                  </div>
+                    {this.state.colorObj.map((item, key) => {
+                        return <span key={key} className= {item.selected ? "color-variants selected-color" : "color-variants"}
+                            style={{ backgroundColor: item.color, color: '#FFF' }}
+                            onClick={() => this.changeColor(item.color)}>
+                        </span>
+                    })}  
+                    </div>
                </div>
                <h6> Quantity: </h6>
                <div className="quanty-input">
-                   <button className="" onClick={() => this.props.decrementCounter()} style={{color: "#333", height: "22px", padding: "0px 15px", border: "1px solid #fff"}}> - </button>
-                    <div className="quantity-count">{this.props.counter}</div>
-                    <button className="" onClick={() => this.props.incrementCounter()} style={{color: "#333", height: "22px", padding: "0px 15px", border: "1px solid #fff", float: "right"}}> + </button>
+                   <button className="" onClick={() => this.decrementItem()} style={{color: "#333", height: "22px", padding: "0px 15px", border: "1px solid #fff"}}> - </button>
+                   <div className="quantity-count">{this.state.quantity}</div>
+                    <button className="" onClick={() => this.incrementItem()} style={{color: "#333", height: "22px", padding: "0px 15px", border: "1px solid #fff", float: "right"}}> + </button>
                 </div>
                <div className="switcher select-switcher shop-tile-capacity-switcher">
-                    <h6> Selection Variants : {this.props.text}</h6>
+                    <h6> Selected Variants : {this.state.variant}</h6>
                   <div className="switcher-box">
-                       
-                        <button className="button"
-                            style={{ borderColor: '#e4e6e8' , color: "#0090d0"}}
-                            onClick={() => this.props.changeText(GREEN_TEXT)}>
-                            64GB
-                        </button>
-
-                        <button className="button"
-                            style={{ borderColor: '#e4e6e8', marginLeft : "20px" , color: "#0090d0" }}
-                            onClick={() => this.props.changeText(RED_TEXT)}>
-                            128GB
-                        </button>
+                        {this.state.variantObj.map((item, key) => {
+                            return <button className={item.selected ? "button selected-button" : "button"}
+                                style={{ borderColor: '#e4e6e8' , color: "#0090d0", marginRight: '1rem'}}
+                                onClick={() => this.changeText(item.variant)}>
+                                {item.variant}
+                            </button>
+                        })}
                      </div>
                   </div>
                
@@ -81,7 +154,7 @@ class Root extends Component {
                    <div className="switcher-box">
                        <div className="shop-tile-col">
                            <a href="#">
-                               <button id="addToCartButton" className="btn btn-action btn-plain" data-co-uitest-element="to-cart-button" style={{minHeight: "30px"}}>
+                               <button id="addToCartButton" onClick={() => this.props.addtocart(productObj)} className="btn btn-action btn-plain" data-co-uitest-element="to-cart-button" style={{minHeight: "30px"}}>
                                   Add to Cart
                               </button></a>
                       </div>
@@ -97,7 +170,7 @@ export default observe((app) => {
     const store = app.get('store');
     
     return streamProps()
-        .setDispatch({ incrementCounter, decrementCounter, changeText, changeColor }, store)
+        .setDispatch({ addtocart }, store)
         .set(
             store.getState$(),
             state => ({ counter: state.counter.value })
@@ -109,6 +182,10 @@ export default observe((app) => {
         .set(
             store.getState$(),
             state => ({ color: state.color.value })
+        )
+        .set(
+            store.getState$(),
+            state => ({ cart: state.cart.value })
         )
        /*  .set(
             app.getAppOnceAvailable$('OrderSummary'),
