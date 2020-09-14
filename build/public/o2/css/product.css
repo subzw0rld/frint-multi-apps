@@ -37,3 +37,13 @@
 .social-icon.social-icon-dark .glyphicon:hover {
     color: #005896;  
 }
+
+.quanty-input {
+    border: 1px solid rgb(204, 204, 204);
+    width: 38%;
+}
+.quantity-count {
+    position: absolute;
+    top: 72%;
+    left: 53%;
+}

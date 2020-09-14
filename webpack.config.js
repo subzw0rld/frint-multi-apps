@@ -34,6 +34,11 @@ module.exports = {
             filename: path.resolve(__dirname, 'build/index.html')
         }),
 
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, 'layouts/index2.ejs'),
+            filename: path.resolve(__dirname, 'build/index2.h   tml')
+        }),
+
         new ScriptExtHTMLWebpackPlugin({
             defaultAttribute: 'async'
         })

@@ -18,15 +18,15 @@ console.log("props-bar ", this.props)
         return (
             <div class="shop-tile-scroll-wrapper">
             <div class="shop-tile shop-tile-price-summary " style={{position: "relative"}}>
-               <span class="shop-tile-slide-link glyphicon glyphicon-arrow-down"></span>
+               {/* <span class="shop-tile-slide-link glyphicon glyphicon-arrow-down"></span> */}
                <div class="shop-tile-col">
-                  <div class="shop-tile-slide-content">
+                  {/* <div class="shop-tile-slide-content">
                      <h2 class="shop-tile-h3">Order Summery</h2>
-                  </div>
+                  </div> */}
                   
                   <div class="row">
                       <div class="col-md-2">
-                          <div class="shop-tile-images"><a href="#" data-toggle="modal"><img src="/public/images/6d61d63f-749e-43c2-b422-dd1fac1654de.png" alt="Apple IPhone X" class="shop-tile-image-product" /></a></div>
+                          <div class="shop-tile-images"><a href="#" data-toggle="modal"><img src="/public/o2/images/6d61d63f-749e-43c2-b422-dd1fac1654de.png" alt="Apple IPhone X" class="shop-tile-image-product" /></a></div>
                       </div>
                       <div class="col-md-6">
                           <div class="shop-tile-slide-content">
