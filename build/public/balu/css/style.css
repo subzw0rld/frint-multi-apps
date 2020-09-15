@@ -353,6 +353,8 @@ h4{
     background: none; */
     color:#ffffff;
     background: #00B6F1;
+    width: 90%;
+    margin:0 auto;
 }
 
 .quanty-input {
@@ -381,7 +383,7 @@ h4{
 .quantity-count {
     position: absolute;
     top: 75.3%;
-    left: 29.2%;
+    left: 28.5%;
 }
 
 strong {
