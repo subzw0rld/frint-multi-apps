@@ -103,9 +103,9 @@ class Root extends Component {
         console.log("obj---", productObj)
         return (
             <div className="shop-tile">
-            {/* <div className="shop-tile-header">
-               <p className="shop-tile-headline"><strong><span className="shop-tile-number">1&nbsp;</span><span>Configure device</span></strong></p>
-            </div> */}
+            <div className="shop-tile-header">
+               <p className="shop-tile-headline" style={{display:"none"}}><strong><span className="shop-tile-number">1&nbsp;</span><span>Configure device</span></strong></p>
+            </div>
             <div className="shop-tile-col margin-b">
                <div className="shop-tile-images"><a href="#" data-toggle="modal"><img src="/public/o2/images/6d61d63f-749e-43c2-b422-dd1fac1654de.png" alt="Apple IPhone X" className="shop-tile-image-product" /></a></div>
             </div>
